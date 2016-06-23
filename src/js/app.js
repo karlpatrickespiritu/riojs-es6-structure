@@ -1,8 +1,8 @@
 'use strict';
 
 import riot from 'riot';
-import '../tags/hello-world.tag';
+import '../tags/people-app.tag';
 
-riot.mount('hello-world', {
+riot.mount('people-app', {
     title: "Hello!"
 });

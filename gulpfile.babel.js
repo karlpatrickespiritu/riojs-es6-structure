@@ -17,7 +17,7 @@ gulp.task('build', () => {
             debug: true
         })
         .transform("babelify", { presets: ["es2015"] })
-        .transform(riotify)
+        .transform(riotify, { type: "es6" })
         .bundle()
         .pipe(source('app.min.js'))
         .pipe(
@@ -39,7 +39,7 @@ gulp.task('build', () => {
 gulp.task('watch', ['build'], function () {
     livereload.listen();
     gulp.watch('./src/js/*.js', ['build']);
-    gulp.watch('./src/tags/*.js', ['build']);
+    gulp.watch('./src/tags/*.tag', ['build']);
 });
 
 gulp.task('default', ['watch']);
