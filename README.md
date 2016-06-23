@@ -1,0 +1,1 @@
+# riojs-es6-structure
